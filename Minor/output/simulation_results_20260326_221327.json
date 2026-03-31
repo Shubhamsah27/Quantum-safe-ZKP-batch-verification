@@ -1,0 +1,146 @@
+{
+  "simulation_start": "2026-03-26T22:13:27.240593",
+  "parameters": {
+    "security_level": 3,
+    "modulus_q": 8380417,
+    "matrix_n": 1024,
+    "matrix_m": 1024,
+    "batch_size": 100,
+    "registration_protocol": "ML-KEM-768 + HKDF-SHA256 + AES-GCM"
+  },
+  "phases": {
+    "setup": {
+      "status": "complete"
+    },
+    "registration": {
+      "devices_registered": 5,
+      "secure_registration": true,
+      "kem": "ML-KEM-768",
+      "aead": "AES-GCM"
+    },
+    "valid_transactions": {
+      "count": 9
+    },
+    "security_test": {
+      "attack_injected": true
+    },
+    "recovery": {
+      "transactions": 100
+    },
+    "scalability": [
+      {
+        "batch_size": 25,
+        "time_ms": 25.198936462402344
+      },
+      {
+        "batch_size": 50,
+        "time_ms": 38.05708885192871
+      },
+      {
+        "batch_size": 75,
+        "time_ms": 41.69344902038574
+      },
+      {
+        "batch_size": 100,
+        "time_ms": 56.04839324951172
+      }
+    ]
+  },
+  "blockchain_stats": {
+    "total_blocks": 5,
+    "total_transactions": 350,
+    "average_block_size": 70.0,
+    "total_verification_time_ms": 15.758514404296875
+  },
+  "device_stats": [
+    {
+      "device_id": "Sensor_Temp_001",
+      "proofs_generated": 73,
+      "total_rejections": 5,
+      "avg_rejections_per_proof": 0.0684931506849315
+    },
+    {
+      "device_id": "Sensor_Humid_002",
+      "proofs_generated": 72,
+      "total_rejections": 5,
+      "avg_rejections_per_proof": 0.06944444444444445
+    },
+    {
+      "device_id": "Sensor_Press_003",
+      "proofs_generated": 72,
+      "total_rejections": 9,
+      "avg_rejections_per_proof": 0.125
+    }
+  ],
+  "performance_metrics": {
+    "1. Batch Verification Time (ms)": {
+      "mean": 2.5066137313842773,
+      "min": 1.4662742614746094,
+      "max": 3.627300262451172,
+      "std": 0.78373870673965
+    },
+    "2. Blockchain Throughput (TPS)": {
+      "value": 24934.037190279167,
+      "total_transactions": 250,
+      "total_time_ms": 10.02645492553711
+    },
+    "3. Computation Cost (ms)": {
+      "key_generation": {
+        "mean": 3.732156753540039,
+        "min": 3.4317970275878906,
+        "max": 4.551172256469727,
+        "std": 0.4134678177916514
+      },
+      "proof_generation": {
+        "mean": 0.5231857299804688,
+        "min": 0.3707408905029297,
+        "max": 1.7423629760742188,
+        "std": 0.19638418319579387
+      },
+      "single_verification": {
+        "mean": 0.3414154052734375,
+        "min": 0.3414154052734375,
+        "max": 0.3414154052734375,
+        "std": 0.0
+      },
+      "batch_verification": {
+        "mean": 2.5066137313842773,
+        "min": 1.4662742614746094,
+        "max": 3.627300262451172,
+        "std": 0.78373870673965
+      }
+    },
+    "4. Communication Cost (bytes)": {
+      "proof_size": {
+        "mean": 8253.930555555555,
+        "min": 8251,
+        "max": 8263,
+        "std": 2.658980531921173
+      },
+      "avg_proof_size": 8253.930555555555
+    },
+    "5. Storage Overhead (bytes)": {
+      "per_device": 16448,
+      "per_transaction": 8253
+    },
+    "6. Scalability": {
+      "batch_sizes_tested": [
+        25,
+        50,
+        75,
+        100
+      ],
+      "verification_time_per_tx": [
+        0.058650970458984375,
+        0.04452228546142578,
+        0.03609021504720052,
+        0.03627300262451172
+      ]
+    },
+    "7. Efficiency": {
+      "avg_rejections_per_proof": 0.08333333333333333,
+      "speedup_vs_individual": 8.512864412422124
+    }
+  },
+  "simulation_end": "2026-03-26T22:13:27.562082"
+}
