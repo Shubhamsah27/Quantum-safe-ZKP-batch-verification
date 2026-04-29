@@ -1,0 +1,9 @@
+cd ~/fabric-samples/test-network
+./network.sh down
+./network.sh up createChannel -c mychannel -ca
+./network.sh deployCC -ccn zkp-ledger -ccp /mnt/c/Users/Anvit/College/Final/blockchain/chaincode -ccl go
+
+npm install
+npm start
+
+python simulation.py

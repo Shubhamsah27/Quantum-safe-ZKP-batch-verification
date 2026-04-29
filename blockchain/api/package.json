@@ -1,0 +1,16 @@
+{
+  "name": "zkp-ledger-api",
+  "version": "1.0.0",
+  "description": "Node.js REST API for Fabric Integration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.8.14",
+    "@hyperledger/fabric-gateway": "^1.2.2",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2"
+  }
+}
